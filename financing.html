@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Header -->
@@ -213,22 +213,22 @@
         <div class="calculator-grid">
           <div class="calculator-form">
             <div class="form-group">
-              <label class="form-label">Equipment Price ($)</label>
+              <label class="form-label" for="equipment-price">Equipment Price ($)</label>
               <input type="number" class="form-input" id="equipment-price" value="285000" min="0" step="1000">
             </div>
             
             <div class="form-group">
-              <label class="form-label">Down Payment ($)</label>
+              <label class="form-label" for="down-payment">Down Payment ($)</label>
               <input type="number" class="form-input" id="down-payment" value="57000" min="0" step="1000">
             </div>
             
             <div class="form-group">
-              <label class="form-label">Interest Rate (%)</label>
+              <label class="form-label" for="interest-rate">Interest Rate (%)</label>
               <input type="number" class="form-input" id="interest-rate" value="5.9" min="0" max="20" step="0.1">
             </div>
             
             <div class="form-group">
-              <label class="form-label">Loan Term (Years)</label>
+              <label class="form-label" for="loan-term">Loan Term (Years)</label>
               <select class="form-select" id="loan-term">
                 <option value="3">3 Years</option>
                 <option value="4">4 Years</option>
@@ -274,39 +274,39 @@
           <p class="section-description">Fill out the form below and our financing team will contact you within 24 hours</p>
         </div>
         
-        <div class="contact-form-wrapper" style="max-width: 800px; margin: 0 auto;">
+        <div class="contact-form-wrapper centered-form">
           <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for your financing application. Our team will contact you within 24 hours.');">
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label">First Name *</label>
-                <input type="text" class="form-input" required>
+                <label class="form-label" for="app-first-name">First Name *</label>
+                <input id="app-first-name" type="text" class="form-input" placeholder="First name" required>
               </div>
               <div class="form-group">
-                <label class="form-label">Last Name *</label>
-                <input type="text" class="form-input" required>
+                <label class="form-label" for="app-last-name">Last Name *</label>
+                <input id="app-last-name" type="text" class="form-input" placeholder="Last name" required>
               </div>
             </div>
             
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label">Email *</label>
-                <input type="email" class="form-input" required>
+                <label class="form-label" for="app-email">Email *</label>
+                <input id="app-email" type="email" class="form-input" placeholder="you@example.com" required>
               </div>
               <div class="form-group">
-                <label class="form-label">Phone *</label>
-                <input type="tel" class="form-input" required>
+                <label class="form-label" for="app-phone">Phone *</label>
+                <input id="app-phone" type="tel" class="form-input" placeholder="(123) 555-0123" required>
               </div>
             </div>
             
             <div class="form-group">
-              <label class="form-label">Company Name *</label>
-              <input type="text" class="form-input" required>
+              <label class="form-label" for="app-company">Company Name *</label>
+              <input id="app-company" type="text" class="form-input" placeholder="Company name" required>
             </div>
             
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label">Years in Business</label>
-                <select class="form-select">
+                <label class="form-label" for="years-in-business">Years in Business</label>
+                <select id="years-in-business" class="form-select">
                   <option value="">Select</option>
                   <option value="0-2">0-2 years</option>
                   <option value="3-5">3-5 years</option>
@@ -315,8 +315,8 @@
                 </select>
               </div>
               <div class="form-group">
-                <label class="form-label">Estimated Annual Revenue</label>
-                <select class="form-select">
+                <label class="form-label" for="estimated-revenue">Estimated Annual Revenue</label>
+                <select id="estimated-revenue" class="form-select">
                   <option value="">Select</option>
                   <option value="under-500k">Under $500K</option>
                   <option value="500k-1m">$500K - $1M</option>
@@ -327,13 +327,13 @@
             </div>
             
             <div class="form-group">
-              <label class="form-label">Equipment Interested In</label>
-              <input type="text" class="form-input" placeholder="e.g., TX-350 Excavator">
+              <label class="form-label" for="equipment-interested">Equipment Interested In</label>
+              <input id="equipment-interested" type="text" class="form-input" placeholder="e.g., TX-350 Excavator">
             </div>
             
             <div class="form-group">
-              <label class="form-label">Financing Type</label>
-              <select class="form-select">
+              <label class="form-label" for="financing-type">Financing Type</label>
+              <select id="financing-type" class="form-select">
                 <option value="">Select</option>
                 <option value="loan">Equipment Loan</option>
                 <option value="lease">Equipment Lease</option>
@@ -343,8 +343,8 @@
             </div>
             
             <div class="form-group">
-              <label class="form-label">Additional Information</label>
-              <textarea class="form-textarea" placeholder="Tell us about your project and financing needs..."></textarea>
+              <label class="form-label" for="additional-info">Additional Information</label>
+              <textarea id="additional-info" class="form-textarea" placeholder="Tell us about your project and financing needs..."></textarea>
             </div>
             
             <button type="submit" class="btn btn-primary btn-large btn-full">Submit Application</button>
@@ -435,7 +435,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <span>+1 (713) 555-8900</span>
+              <span>+1 (947) 800-4275</span>
             </div>
             <div class="footer-contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -458,6 +458,6 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
